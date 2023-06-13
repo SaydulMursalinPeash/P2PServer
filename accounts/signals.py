@@ -11,7 +11,7 @@ def create_chatroom(sender, instance, created, **kwargs):
         user_name=user.name
         user_id=user.id
         room_name=user_name
-        new_chat=ChatRoom.objects.create(name=room_name,user=user,stuff=None)
+        #new_chat=ChatRoom.objects.create(name=room_name,user=user)
         #new_chat.save()
-        print('New Chatroom created....')
+        #print('New Chatroom created....')
 

@@ -6,13 +6,14 @@ from accounts.models import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
-        fields=['id','name']
+        fields=['id','name','is_admin','is_officer']
 class ChatRoomSerializer(serializers.ModelSerializer):
+    user=UserSerializer()
     class Meta:
         model=ChatRoom
-        fields=['name']
+        fields=['name','user']
 
-class MessageSerializer(serializers.Serializer):
+class MessageSerializer(serializers.ModelSerializer):
     user=UserSerializer()
     chat_room=ChatRoomSerializer()
     class Meta:

@@ -24,7 +24,10 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         return User.objects.create_user(**validated_data)
     
-
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=User
+        fields=['id','name','is_admin','is_officer']
 
 
 class UserLoginSerializer(serializers.ModelSerializer):
@@ -37,7 +40,7 @@ class UserLoginSerializer(serializers.ModelSerializer):
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
-        fields=['id','email','name']
+        fields=['id','email','name','is_officer','is_admin']
 
 
 class UserChangePasswordSerializer(serializers.Serializer):

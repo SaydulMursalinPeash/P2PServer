@@ -31,7 +31,9 @@ urlpatterns = [
     path('api/user/',include('accounts.urls')),
     path('api/chat/',include('chat.urls')),
     path('api/currency/',include('currency.urls')),
-    path('api/payment/',include('payment.urls'))
+    path('api/payment/',include('payment.urls')),
+    path('api/order/',include('order.urls')),
+    path('api/contact/',include('contact.urls')),
 ]
 
 urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

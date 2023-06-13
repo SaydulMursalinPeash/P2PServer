@@ -140,7 +140,7 @@ DATABASES = {
         'NAME': 'p2pdb',
         'USER': 'peash',
         'PASSWORD': 'YJj9TXmTIciWyk5gxA48GFESbX88GjMs',
-        'HOST': 'postgres://peash:YJj9TXmTIciWyk5gxA48GFESbX88GjMs@dpg-ci4crfunqql46qqvp2eg-a/p2pdb',
+        'HOST': 'dpg-ci4crfunqql46qqvp2eg-a',
         'PORT': '5432',
     }
 }

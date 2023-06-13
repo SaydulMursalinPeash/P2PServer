@@ -18,4 +18,3 @@ asgiref
 pytz
 sqlparse
 gunicorn
-dj-database-url

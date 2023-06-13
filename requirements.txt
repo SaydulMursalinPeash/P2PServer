@@ -1,4 +1,4 @@
-celery==5.3.0
+celery==4.3.0
 channels
 daphne
 Django

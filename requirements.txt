@@ -17,4 +17,4 @@ mysqlclient
 asgiref
 pytz
 sqlparse
-gunicorn
+gunicorn==20.1.0

@@ -134,6 +134,7 @@ DATABASES = {
     }
 }
 '''
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -144,7 +145,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+'''
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -226,7 +227,6 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSlidingSerializer",
 }
 
-
 PASSWORD_RESET_TIMEOUT=900
 
 CORS_ALLOWED_ORIGINS = [
@@ -240,3 +240,10 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+import dj_database_url as djurl
+BATABASES={
+    'default':djurl.parse('postgres://peash:YJj9TXmTIciWyk5gxA48GFESbX88GjMs@dpg-ci4crfunqql46qqvp2eg-a.singapore-postgres.render.com/p2pdb')
+}
